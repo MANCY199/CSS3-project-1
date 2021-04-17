@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    background-image: url(bg.jpg);
+}
+
+h1 {
+    text-align: center;
+    color: grey;
+}
+
+.gallery {
+    margin: 50px 130px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100%);
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 10px 10px 5px rgb(19, 18, 18);
+    position: relative;
+    transition: left 2s;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+}
+
+.gallery img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+    box-shadow: none;
+}
