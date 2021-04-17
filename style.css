@@ -1,33 +1,76 @@
-body {
-    font-family: sans-serif;
-    background-image: url(bg.jpg);
-}
-
-h1 {
-    text-align: center;
-    color: grey;
-}
-
-.gallery {
-    margin: 50px 130px;
-}
-
-.gallery img {
-    width: 200px;
-    height: 200px;
-    filter: grayscale(100%);
-    margin: 15px;
-    padding: 15px;
-    box-shadow: 10px 10px 5px rgb(19, 18, 18);
-    position: relative;
-    transition: left 2s;
-    -webkit-transition: left 2s;
-    -moz-transition: left 2s;
-    -o-transition: left 2s;
-}
-
-.gallery img:hover {
-    filter: grayscale(0);
-    transform: scale(1.1);
-    box-shadow: none;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --tran: all 0.4s linear;
+    }
+    
+    html {
+        font-size: 10px;
+    }
+    
+    .main_div {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(45, 58, 58);
+        display: grid;
+        place-items: center;
+    }
+    
+    .centre_div {
+        width: 30vw;
+        height: 60vh;
+        position: relative;
+        box-shadow: 0 20px 20px rgb(34, 44, 44);
+        overflow: hidden;
+    }
+    
+    .centre_div img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .centre_div .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        font-size: 32px;
+        margin: 15px;
+        font-family: 'Dancing Script', cursive;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: rgd(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: var(--tran);
+    }
+    
+    .centre_div .caption p {
+        transition: var(--tran);
+        margin-top: 30rem;
+    }
+    
+    .centre_div:hover img {
+        transform: scale(1.3) rotate(15deg);
+        transition: var(--tran);
+    }
+    
+    .centre_div:hover .caption {
+        opacity: 1;
+    }
+    
+    .centre_div:hover .caption p {
+        transition: var(--tran);
+        margin-top: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .centre_div {
+            width: 50vw;
+            height: 60vh;
+        }
+    }
