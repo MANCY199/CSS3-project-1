@@ -1,2 +1,2 @@
 # Project1
-CSS3 Effect
+CSS3 image gallery and hover effect
